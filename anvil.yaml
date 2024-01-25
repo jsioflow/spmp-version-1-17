@@ -338,7 +338,7 @@ services:
 startup: {type: form, module: Calculator}
 package_name: SPMP_Version_1_17
 allow_embedding: false
-name: Clone of Electric Tariff Calculator V1.0
+name: Electric Tariff Calculator V2.0
 runtime_options:
   version: 2
   client_version: '3'
