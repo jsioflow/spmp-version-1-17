@@ -31,6 +31,9 @@ class Calculator(CalculatorTemplate):
    # return_value = anvil.server.call('say_hello', 'Anvil Developer')
    # print(f"The return value was {return_value}")
 
+  # Any code you write here will run when the form opens.
+    anvil.server.call('say_hello', 'Anvil Developer')
+
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     print(f"The file's name is: {file.name}")
@@ -44,10 +47,10 @@ class Calculator(CalculatorTemplate):
       self.label_6.icon_align = "left"
       self.label_6.foreground = "#e01010"
     
-    folder1 = app_files.uploads
-    new_file = folder1.create_file(file.name)
-    new_file.set_media(self.file_loader_1.file)
-    anvil.server.call('file_for_analysis',new_file)
+   # folder1 = app_files.uploads
+   # new_file = folder1.create_file(file.name)
+   # new_file.set_media(self.file_loader_1.file)
+    anvil.server.call('file_for_analysis',file)
 
     #folder2 = app_files.uploads_archive
     #new_file = folder2.create_file(file.name)
