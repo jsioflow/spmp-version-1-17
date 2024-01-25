@@ -31,8 +31,9 @@ class Calculator(CalculatorTemplate):
    # return_value = anvil.server.call('say_hello', 'Anvil Developer')
    # print(f"The return value was {return_value}")
 
-  # Any code you write here will run when the form opens.
+ # Any code you write here will run when the form opens.
     anvil.server.call('say_hello', 'Anvil Developer')
+    #anvil.server.call('file_for_analysis',file)
 
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
@@ -41,6 +42,8 @@ class Calculator(CalculatorTemplate):
     print(f"The file's content type is: {file.content_type}")
   #  print(f"The file's contents are: '{file.get_bytes()}'")
     self.label_2.text = file.name
+    anvil.server.call('say_hello', 'Anvil Developer')
+    anvil.server.call('file_for_analysis',file)
     if file.length > 125000:
       self.label_5.text = "File has 'Too Many Days' please refresh the page and resubmit"
       self.label_6.icon = "fa:refresh"
@@ -50,7 +53,7 @@ class Calculator(CalculatorTemplate):
    # folder1 = app_files.uploads
    # new_file = folder1.create_file(file.name)
    # new_file.set_media(self.file_loader_1.file)
-    anvil.server.call('file_for_analysis',file)
+    
 
     #folder2 = app_files.uploads_archive
     #new_file = folder2.create_file(file.name)
@@ -58,7 +61,7 @@ class Calculator(CalculatorTemplate):
     pass
 
     # Test dataframe import from CSV in Google within Server Function
-    self.rich_text_1.content = anvil.server.call('LoadOffshoreAssets', new_file)
+    #self.rich_text_1.content = anvil.server.call('LoadOffshoreAssets', new_file)
     #print('MPRN Value Returned from Server',customerMPRN)
     #print('\r\n')
 
