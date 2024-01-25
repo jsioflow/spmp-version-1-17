@@ -47,6 +47,7 @@ class Calculator(CalculatorTemplate):
     folder1 = app_files.uploads
     new_file = folder1.create_file(file.name)
     new_file.set_media(self.file_loader_1.file)
+    anvil.server.call('file_for_analysis',new_file)
 
     #folder2 = app_files.uploads_archive
     #new_file = folder2.create_file(file.name)
