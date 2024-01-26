@@ -29,10 +29,10 @@ class Calculator(CalculatorTemplate):
     print(f"The file's content type is: {file.content_type}")
   #  print(f"The file's contents are: '{file.get_bytes()}'")
     self.label_2.text = file.name
+    folder1 = app_files.uploads
+    new_file = folder1.create_file(file.name)
+    new_file.set_media(self.file_loader_1.file)
     anvil.server.call('say_hello', 'Anvil Developer')
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
 
-  #folder1 = app_files.uploads_archive
-  #new_file = folder1.create_file(file.name)
-  #new_file.set_media(self.file_loader_1.file)
   pass

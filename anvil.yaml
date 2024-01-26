@@ -331,8 +331,11 @@ services:
       modifiedDate: '2024-01-20T18:34:38.370Z'
       quotaBytesUsed: '0'
       ownerNames: [John Stone]
-  server_config: {}
+  server_config: {enc_delegation_refresh_token: 1643GBhn1msBg0CvzlytziEbPNqA8C0DKXHg6MbWJbApffJ77Z8Nk+Ng5q+Cu6o7aO9dhc4SIsTh9ibjZHoJmmWqgM/aBWVv+Z59/GygoweE7CO3rGd8ptcZFuInO0dYbObpmCWHL8deHOUreNmVlH949W3Wf0mNIIKL+ERlAth5fHkAhRV6sy6Y50wSk1dD7iVFGqpVtiDePnXXweBEgTHmAKBvB/WYbfPcVw/sdZNFtAhedP6X948/9BFAh+fkx/lgwkS2StME2pTxLXxtnUc30dijdljssPQQlmglgZBs8p/YYHHLef5f7WdHgg==}
 - source: /runtime/services/anvil/files.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
 startup: {type: form, module: Calculator}
