@@ -24,10 +24,6 @@ from anvil.google.drive import app_files
 # them with @anvil.server.callable.
 # Here is an example - you can replace it with your own:
 #
-@anvil.server.callable
-def say_hello(name):
-  print(f"Hello from the server, {name}")
-  return [1, 2, 3, 4]
   
 def PowerImportData(data):
     dfOriginalImport = data[data['Read Type'].str.contains("Import")]
@@ -43,12 +39,8 @@ def PowerImportData(data):
   
 def PowerImportDataIncomplete(data):
     dfOriginalImport = data[data['Read Type'].str.contains("Import")]
-    #dfOriginalImport = dfOriginalImport.rename(columns={'Read Date and End Time':'Date'})
-    #dfOriginalImport['Date'] = pd.to_datetime(dfOriginalImport['Read Date and End Time'], format='mixed')
     dfOriginalImport['Date'] = pd.to_datetime(dfOriginalImport['Read Date and End Time'])
     dfOriginalImport['Day'] = dfOriginalImport['Date'].dt.day_name()
-    #    for x in range(0,len(dfOriginalImport)):
-    #        dfOriginalImport.loc[x,'Day'] = dfOriginalImport.loc[x,'Date'].day_name()
     dfOriginalImport = dfOriginalImport[['Date','Day','MPRN','Meter Serial Number','Read Value','Read Type']]
     print(dfOriginalImport.head(1))
     df1 = pd.DataFrame(columns=['Date','Count'])
@@ -160,20 +152,10 @@ def LoadOffshoreAssets(file):
    # print(dfTariffs_days.head(1))
   #print(dfOriginal.head(1))
   
-  #dfOriginalImport = PowerImportData(dfOriginal)
   dfOriginalImport = PowerImportDataIncomplete(dfOriginal)
   dfChargeMatrix = GenerateChargeMatrix(dfOriginalImport, dfTariffs, dfTariffs_days)
-  #print('dfOriginal Sample Output',dfOriginalImport.head(1))
-  #print('ChargeMatrix Output',dfChargeMatrix)
-  #value = str(dfOriginal.loc[0,'MPRN'])
   return dfChargeMatrix.to_markdown()
 
-#@anvil.server.callable
-#def df_as_markdown():
-#    with open(data_files['Utility_Plans_Days.csv']) as file2:
-#      df = pd.read_csv(file2)
-#    return df.to_markdown()
-  
 @anvil.server.callable
 def return_text_from_file():
     # Read the contents of a file
@@ -189,11 +171,3 @@ def return_data_from_file():
   with open(data_files['Utility_Plans_Days.csv']) as file2:
     dfDays = pd.read_csv(file2)
    # print(dfDays.head(1))
-
-
-#  print(dfcustomerdata.head(1))
-   #     data = dfhours.read()
-   # file = 'Utility_Plans_Hours.csv'
-   # my_bytes=file.get_bytes()
-   # dfHours = pd.read_csv(BytesIO(my_bytes))
-   # return dfHours

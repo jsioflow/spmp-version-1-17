@@ -31,9 +31,4 @@ class Calculator(CalculatorTemplate):
     self.label_2.text = file.name
     anvil.server.call('say_hello', 'Anvil Developer')
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
-   # if file.length > 125000:
-   #   self.label_5.text = "File has 'Too Many Days' please refresh the page and resubmit"
-   #   self.label_6.icon = "fa:refresh"
-   #   self.label_6.icon_align = "left"
-   #   self.label_6.foreground = "#e01010"
     pass
