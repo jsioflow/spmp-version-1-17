@@ -31,8 +31,8 @@ class Calculator(CalculatorTemplate):
     self.label_2.text = file.name
     anvil.server.call('say_hello', 'Anvil Developer')
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
-    pass
 
-  folder1 = app_files.uploads_archive
-  new_file = folder1.create_file(file.name)
-  new_file.set_media(self.file_loader_1.file)
+  #folder1 = app_files.uploads_archive
+  #new_file = folder1.create_file(file.name)
+  #new_file.set_media(self.file_loader_1.file)
+  pass
