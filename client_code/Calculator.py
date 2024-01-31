@@ -36,7 +36,7 @@ class Calculator(CalculatorTemplate):
     new_file.set_media(self.file_loader_1.file)
     anvil.server.call('say_hello', 'Anvil Developer')
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
-  pass
+  
   
 #  def button_1_click(self, **event_args):
 #    """This method is called when the button is clicked"""
@@ -47,3 +47,4 @@ class Calculator(CalculatorTemplate):
     ## Return to Main Screen if the User logs in again
 #    open_form("Calculator")
 #    pass
+pass
