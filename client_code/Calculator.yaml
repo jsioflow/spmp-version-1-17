@@ -69,6 +69,15 @@ components:
   properties: {height: '3'}
   type: Spacer
   layout_properties: {grid_position: 'LRLLMO,SFOMOI', full_width_row: true, row_background: '#b9bebe'}
+- name: button_1
+  properties: {text: Logout, bold: true, font_size: 20}
+  type: Button
+  layout_properties: {grid_position: 'DMGKWG,YGHIJS'}
+  event_bindings: {click: button_1_click}
+- name: label_5
+  properties: {bold: true, align: center, text: Logout Complete, visible: false, font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'DMGKWG,TTWPMW'}
 - type: Label
   properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
     visible: true, text: 'Copyright IOFLOW Ltd, Release_2.0 2024', font_size: 10,
@@ -88,5 +97,5 @@ components:
 container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '2px solid #888888', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":25,"KZKPFG":35,"NTDSQB":35,"ESTSMM":4}',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":25,"KZKPFG":35,"NTDSQB":30,"ESTSMM":4,"YGHIJS":15,"TTWPMW":20}',
     spacing_below: small, background: ''}
