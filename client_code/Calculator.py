@@ -12,7 +12,6 @@ import json
 import anvil.http
 from time import sleep
 import anvil.media
-from anvil.google.drive import app_files
 
 class Calculator(CalculatorTemplate):
   def __init__(self, **properties):
