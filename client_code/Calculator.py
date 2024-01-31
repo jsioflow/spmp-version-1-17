@@ -23,6 +23,7 @@ class Calculator(CalculatorTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
+    self.label_5
     sleep(3)
     anvil.users.logout()
     anvil.users.login_with_form()
