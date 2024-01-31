@@ -20,10 +20,13 @@ class Calculator(CalculatorTemplate):
 
  # Any code you write here will run when the form opens.
     anvil.server.call('say_hello', 'Anvil Developer')
+    anvil.users.login_with_form()
+    ## Return to Main Screen if the User logs in again
+    open_form("Calculator")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.label_5
+    self.label_5.visible = True
     sleep(3)
     anvil.users.logout()
     anvil.users.login_with_form()

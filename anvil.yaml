@@ -134,7 +134,7 @@ startup_form: null
 db_schema:
   users:
     title: Users
-    client: none
+    client: full
     server: full
     columns:
     - name: email
