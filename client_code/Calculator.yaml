@@ -85,7 +85,8 @@ components:
   layout_properties: {grid_position: 'DMGKWG,YGHIJS'}
   event_bindings: {click: button_1_click}
 - name: label_5
-  properties: {bold: true, align: center, text: Logout Complete, visible: false, font_size: 20}
+  properties: {bold: true, align: center, text: Logout Complete, visible: false, font_size: 20,
+    foreground: '#d01616'}
   type: Label
   layout_properties: {grid_position: 'DMGKWG,TTWPMW'}
 - type: Label

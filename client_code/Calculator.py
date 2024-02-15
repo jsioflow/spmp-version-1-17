@@ -39,12 +39,18 @@ class Calculator(CalculatorTemplate):
     print(f"The number of bytes in the file is: {file.length}")
     print(f"The file's content type is: {file.content_type}")
   #  print(f"The file's contents are: '{file.get_bytes()}'")
+    self.label_6.visible = True
+    if file.content_type != 'text/csv':
+      self.label_6.foreground = "#d01616"
+      self.label_6.text = 'This is an invalid file, Please try again'
+    if file.content_type == 'text/csv':
+      self.label_6.foreground = "#16d02b"
+      self.label_6.text = 'This is a valid file, Processing ....'
     self.label_2.text = file.name
     folder1 = app_files.uploads
     new_file = folder1.create_file(file.name)
     new_file.set_media(self.file_loader_1.file)
-    self.label_6.visible = True
-    self.label_6.text = anvil.server.call('file_for_checking', file)
+      #self.label_6.text = anvil.server.call('file_for_checking', file)
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
     self.label_6.visible = False
   pass
