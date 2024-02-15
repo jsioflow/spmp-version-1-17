@@ -61,55 +61,6 @@ services:
       modifiedDate: '2024-01-20T17:54:07.506Z'
       quotaBytesUsed: '0'
       ownerNames: [John Stone]
-    - capabilities: {canEdit: true, canCopy: false}
-      editable: true
-      copyable: false
-      embedLink: https://drive.google.com/embeddedfolderview?id=1sXM3H4blTdA67X0GZDKFVnyl_Qg8CpFO
-      copyRequiresWriterPermission: false
-      python_name: uploads_archive
-      explicitlyTrashed: false
-      lastModifyingUser:
-        displayName: John Stone
-        kind: drive#user
-        isAuthenticatedUser: true
-        permissionId: '14425554729285325484'
-        emailAddress: stone.john@ioflow.ai
-        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjWmE1fWkfSXfX8lZItNvdQoDLT9wcJdjrogvwHXwK3wsHYsXWAZSksn2D2py-x1Pfp4YEqJIrvZ3qFrnBMRZOIPwby24G-XH0h018jpJ8CKUEweoYQn-XHSbGuWpajB5HfO0bFNb-Qbl69NBu9PcedOsvnyV-9kA6WuddykvEtiL3nzUSQ_ClR8KGE8AM2hWOqrJEfqiV5lAlrCBlQqJoDDjI7ygn2gMUpQfkT3gzen4GVbT9WGENdf3lQzPUdUHIsDAjZ9yx43ULsOMZN6eyTNM_IjXiRZfqdn9aVNZRPm10KgbsINqz08-5wJbfqrgCe5UQkhZDP4vU-8Wj4c5Nydj2Yyxw5albvEqpd2VF9bAXYYO7WN6o2xmOTsAwISLmtS_SB1XVzy7s7GkAns1HSanS6oTa_Isx-TB1s10qgsj-dYXn8A-5yFYI1BS_LPhFFHgWDC-_bg68uOrAMmaWG3WTAafDDjA5p74Hm4TrjeTy3Oib3woP5HcBUD-nSkUujxh7DHR71w4OCawelau0At9KBLGX7AY9Lkyi5QgaKP0C41pkFLIuLCYcN2_c5hUbzCCBTxdRcwlXhYqIyDXKSLLcLxrwVhgOeN-FcCu5gDOQj-uk_vvBjngjMdLm7YPFWR2_KNdlKzCT3lWtQf86swrV5H722TlOQfetBzaMmuK60tYN4sXy7qSpFQr4qlCDeZeDJYAIjutRI68K8RR8bnC5SKrKl0mSgY2700bU8n5VOPFPrsa2ypE-pUlfpZq7OQtGzJqudtb6BoeIAYVQGc6AkQCkSNtc-ImGN1fKvPuac7f0YRn2tyTxcptIDyVo85HK-s-BrYi8N0FcC5nUgunrH4RiCa8zn-S1zuRZgEjiOB2TlMHO4HHOeJPWY9lPiB7yBE5OXROhlsGd3E1Nh6DyMhKNzxu2vCmcFCcSzIig=s64'}
-      shared: false
-      createdDate: '2024-01-20T18:34:38.370Z'
-      id: 1sXM3H4blTdA67X0GZDKFVnyl_Qg8CpFO
-      owners:
-      - displayName: John Stone
-        kind: drive#user
-        isAuthenticatedUser: true
-        permissionId: '14425554729285325484'
-        emailAddress: stone.john@ioflow.ai
-        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjWmE1fWkfSXfX8lZItNvdQoDLT9wcJdjrogvwHXwK3wsHYsXWAZSksn2D2py-x1Pfp4YEqJIrvZ3qFrnBMRZOIPwby24G-XH0h018jpJ8CKUEweoYQn-XHSbGuWpajB5HfO0bFNb-Qbl69NBu9PcedOsvnyV-9kA6WuddykvEtiL3nzUSQ_ClR8KGE8AM2hWOqrJEfqiV5lAlrCBlQqJoDDjI7ygn2gMUpQfkT3gzen4GVbT9WGENdf3lQzPUdUHIsDAjZ9yx43ULsOMZN6eyTNM_IjXiRZfqdn9aVNZRPm10KgbsINqz08-5wJbfqrgCe5UQkhZDP4vU-8Wj4c5Nydj2Yyxw5albvEqpd2VF9bAXYYO7WN6o2xmOTsAwISLmtS_SB1XVzy7s7GkAns1HSanS6oTa_Isx-TB1s10qgsj-dYXn8A-5yFYI1BS_LPhFFHgWDC-_bg68uOrAMmaWG3WTAafDDjA5p74Hm4TrjeTy3Oib3woP5HcBUD-nSkUujxh7DHR71w4OCawelau0At9KBLGX7AY9Lkyi5QgaKP0C41pkFLIuLCYcN2_c5hUbzCCBTxdRcwlXhYqIyDXKSLLcLxrwVhgOeN-FcCu5gDOQj-uk_vvBjngjMdLm7YPFWR2_KNdlKzCT3lWtQf86swrV5H722TlOQfetBzaMmuK60tYN4sXy7qSpFQr4qlCDeZeDJYAIjutRI68K8RR8bnC5SKrKl0mSgY2700bU8n5VOPFPrsa2ypE-pUlfpZq7OQtGzJqudtb6BoeIAYVQGc6AkQCkSNtc-ImGN1fKvPuac7f0YRn2tyTxcptIDyVo85HK-s-BrYi8N0FcC5nUgunrH4RiCa8zn-S1zuRZgEjiOB2TlMHO4HHOeJPWY9lPiB7yBE5OXROhlsGd3E1Nh6DyMhKNzxu2vCmcFCcSzIig=s64'}
-      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
-      spaces: [drive]
-      parents:
-      - {selfLink: 'https://www.googleapis.com/drive/v2/files/1sXM3H4blTdA67X0GZDKFVnyl_Qg8CpFO/parents/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF',
-        id: 1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF, isRoot: false, kind: drive#parentReference,
-        parentLink: 'https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF'}
-      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
-      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.folder
-      selfLink: https://www.googleapis.com/drive/v2/files/1sXM3H4blTdA67X0GZDKFVnyl_Qg8CpFO
-      lastViewedByMeDate: '2024-01-20T18:34:38.370Z'
-      userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1sXM3H4blTdA67X0GZDKFVnyl_Qg8CpFO/permissions/me',
-        etag: '"QUeBsGiwP9CeWCRGaKaorhhJSvc"', pendingOwner: false}
-      lastModifyingUserName: John Stone
-      etag: '"MTcwNTc3NTY3ODM3MA"'
-      kind: drive#file
-      modifiedByMeDate: '2024-01-20T18:34:38.370Z'
-      title: Uploads_Archive
-      version: '1'
-      appDataContents: false
-      writersCanShare: true
-      alternateLink: https://drive.google.com/drive/folders/1sXM3H4blTdA67X0GZDKFVnyl_Qg8CpFO
-      mimeType: application/vnd.google-apps.folder
-      modifiedDate: '2024-01-20T18:34:38.370Z'
-      quotaBytesUsed: '0'
-      ownerNames: [John Stone]
   server_config: {enc_delegation_refresh_token: 1643GBhn1msBg0CvzlytziEbPNqA8C0DKXHg6MbWJbApffJ77Z8Nk+Ng5q+Cu6o7aO9dhc4SIsTh9ibjZHoJmmWqgM/aBWVv+Z59/GygoweE7CO3rGd8ptcZFuInO0dYbObpmCWHL8deHOUreNmVlH949W3Wf0mNIIKL+ERlAth5fHkAhRV6sy6Y50wSk1dD7iVFGqpVtiDePnXXweBEgTHmAKBvB/WYbfPcVw/sdZNFtAhedP6X948/9BFAh+fkx/lgwkS2StME2pTxLXxtnUc30dijdljssPQQlmglgZBs8p/YYHHLef5f7WdHgg==}
 - source: /runtime/services/anvil/files.yml
   client_config: {}

@@ -21,7 +21,7 @@ class Calculator(CalculatorTemplate):
  # Any code you write here will run when the form opens.
     anvil.users.login_with_form()
     print(f"This user has logged in: {anvil.users.get_user()['email']}")
-    anvil.server.call('say_hello', 'Anvil Developer')
+    #anvil.server.call('say_hello', 'Anvil Developer')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -43,6 +43,6 @@ class Calculator(CalculatorTemplate):
     folder1 = app_files.uploads
     new_file = folder1.create_file(file.name)
     new_file.set_media(self.file_loader_1.file)
-    anvil.server.call('say_hello', 'Anvil Developer')
+    self.label_6.content = anvil.server.call('file_for_checking', file)
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
   pass
