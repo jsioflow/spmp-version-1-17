@@ -43,6 +43,8 @@ class Calculator(CalculatorTemplate):
     folder1 = app_files.uploads
     new_file = folder1.create_file(file.name)
     new_file.set_media(self.file_loader_1.file)
-    self.label_6.content = anvil.server.call('file_for_checking', file)
+    self.label_6.visible = True
+    self.label_6.text = anvil.server.call('file_for_checking', file)
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
+    self.label_6.visible = False
   pass
