@@ -108,5 +108,5 @@ components:
 container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '2px solid #888888', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":35,"NTDSQB":35,"ESTSMM":4,"YGHIJS":15,"TTWPMW":15,"GGYAAQ":25}',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":30,"NTDSQB":35,"ESTSMM":4,"YGHIJS":15,"TTWPMW":15,"GGYAAQ":30}',
     spacing_below: small, background: ''}
