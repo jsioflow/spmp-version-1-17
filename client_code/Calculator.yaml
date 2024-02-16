@@ -71,6 +71,10 @@ components:
   properties: {height: '3'}
   type: Spacer
   layout_properties: {grid_position: 'KQFRPI,SPSIKO', full_width_row: true, row_background: '#b9bebe'}
+- name: rich_text_3
+  properties: {}
+  type: RichText
+  layout_properties: {grid_position: 'GEKUTO,CFPZSW'}
 - name: rich_text_1
   properties: {align: center}
   type: RichText
