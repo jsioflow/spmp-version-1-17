@@ -54,6 +54,8 @@ class Calculator(CalculatorTemplate):
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
     self.label_6.foreground = "#16d02b"
     self.label_6.text = 'Processing Complete, Results Below'
+    self.rich_text_3.content = anvil.server.call('get_winning_tariff')
+    self.rich_text_3.foreground = "#16d02b"
     sleep(15)
     self.label_6.visible = False
   pass
