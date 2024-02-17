@@ -25,7 +25,7 @@ class Calculator(CalculatorTemplate):
     print(f'This is a test to see if this is triggered when a user is attempting to get a password')
     print(f"This user has logged in: {anvil.users.get_user()['email']}")
     #anvil.server.call('say_hello', 'Anvil Developer')
-    Global.say_hello()
+    Globals.say_hello()
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -40,12 +40,6 @@ class Calculator(CalculatorTemplate):
     ## Return to Main Screen if the User logs in again
     open_form("Calculator")
     pass
-
-  #def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-   # pdf_file = anvil.server.call('build_pdf')
-   # anvil.media.download(pdf_file)
-   # pass
 
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
@@ -70,6 +64,8 @@ class Calculator(CalculatorTemplate):
     self.label_6.foreground = "#16d02b"
     self.label_6.text = 'Processing Complete, Results Below'
     self.rich_text_3.content = anvil.server.call('get_winning_tariff')
+    # Transfer of Recommendation to Global Module
+    Globals.recommendation = self.rich_text_3.content
     self.rich_text_3.foreground = "#16d02b"
   pass
 
