@@ -12,8 +12,8 @@ import json
 import anvil.http
 from time import sleep
 import anvil.media
-from .. import Global
-from ..Form1 import Form1
+from . import Globals
+from . Form1 import Form1
 
 class Calculator(CalculatorTemplate):
   def __init__(self, **properties):
@@ -66,7 +66,7 @@ class Calculator(CalculatorTemplate):
     new_file.set_media(self.file_loader_1.file)
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
     # Transfer of Answer to Global Module
-    Global.answer = self.rich_text_1.content
+    Globals.answer = self.rich_text_1.content
     self.label_6.foreground = "#16d02b"
     self.label_6.text = 'Processing Complete, Results Below'
     self.rich_text_3.content = anvil.server.call('get_winning_tariff')
