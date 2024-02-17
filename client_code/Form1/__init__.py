@@ -13,7 +13,7 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.rich_text_1.content = answer
+    self.rich_text_1.content = Global.answer
     # Any code you write here will run before the form opens.
 
   def rich_text_1_show(self, **event_args):
