@@ -2,7 +2,8 @@ unique_ids:
   forms:
     Calculator: '1705694413055935627756037.8483'
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1708166669036829862628193.7163'
   assets:
     CompressJPEG.online_512x512_image.png: '1705683506311995063568964.8689'
     IOFLOW1 Logo.jpg: '1705952367333909729115114.8221'

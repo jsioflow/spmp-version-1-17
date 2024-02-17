@@ -29,10 +29,20 @@ class Calculator(CalculatorTemplate):
     self.label_5.visible = True
     sleep(3)
     anvil.users.logout()
+    self.rich_text_1.visible = False
+    self.label_2.visible = False
+    self.rich_text_3.visible = False
+    self.label_6.visible = False
     anvil.users.login_with_form()
     ## Return to Main Screen if the User logs in again
     open_form("Calculator")
     pass
+
+  #def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+   # pdf_file = anvil.server.call('build_pdf')
+   # anvil.media.download(pdf_file)
+   # pass
 
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
@@ -56,6 +66,8 @@ class Calculator(CalculatorTemplate):
     self.label_6.text = 'Processing Complete, Results Below'
     self.rich_text_3.content = anvil.server.call('get_winning_tariff')
     self.rich_text_3.foreground = "#16d02b"
-    sleep(15)
-    self.label_6.visible = False
+    #sleep(30)
+    #self.label_6.visible = False
   pass
+
+
