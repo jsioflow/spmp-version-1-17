@@ -13,7 +13,7 @@ import anvil.pdf
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
-#@anvil.server.callable
-#def build_pdf():
-#  pdf_file = anvil.pdf.render_form('Calculator')
-#  return pdf_file
+@anvil.server.callable
+def build_pdf(data1, data2):
+  pdf_file = anvil.pdf.render_form('Form1', data1, data2)
+  return pdf_file

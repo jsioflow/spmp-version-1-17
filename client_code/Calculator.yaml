@@ -1,6 +1,7 @@
 components:
 - name: text_box_1
-  properties: {text: 'How to get your HDF File from ESB Networks:', bold: true, font_size: 20}
+  properties: {text: How to get your HDF File from ESB Networks, bold: true, font_size: 24,
+    align: center, spacing_above: small}
   type: TextBox
   layout_properties: {grid_position: 'ZMQXVR,PWBRWW'}
 - name: image_1
@@ -39,7 +40,7 @@ components:
   properties: {visible: true, spacing_above: small, spacing_below: small, height: '0',
     tooltip: ''}
   name: spacer_1
-  layout_properties: {grid_position: 'JPHDLY,BFJMLQ', row_background: '#3a88fe'}
+  layout_properties: {grid_position: 'JPHDLY,BFJMLQ', row_background: '#3a88fe', full_width_row: true}
 - name: label_3
   properties: {text: 'Which is the best electricity tariff for you?', font_size: 30,
     align: center, bold: true, italic: false}
@@ -68,7 +69,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'XJTBOV,KZKPFG'}
 - name: spacer_3
-  properties: {height: '3'}
+  properties: {height: '0'}
   type: Spacer
   layout_properties: {grid_position: 'KQFRPI,SPSIKO', full_width_row: true, row_background: '#b9bebe'}
 - name: rich_text_3
@@ -80,7 +81,7 @@ components:
   type: RichText
   layout_properties: {grid_position: 'IIOGLB,XBIRIS'}
 - name: spacer_6
-  properties: {height: '3'}
+  properties: {height: '0'}
   type: Spacer
   layout_properties: {grid_position: 'LRLLMO,SFOMOI', full_width_row: true, row_background: '#b9bebe'}
 - name: button_1
@@ -94,7 +95,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'DMGKWG,TTWPMW'}
 - name: button_2
-  properties: {text: button_2, visible: true}
+  properties: {text: PDF, visible: true, bold: true, font_size: 20, icon: 'fa:file-pdf-o'}
   type: Button
   layout_properties: {grid_position: 'DMGKWG,LLRHIX'}
   event_bindings: {click: button_2_click}
@@ -110,12 +111,12 @@ components:
   type: Image
   layout_properties: {grid_position: 'DMGKWG,ESTSMM'}
 - type: Spacer
-  properties: {visible: true, spacing_above: small, spacing_below: small, height: '3',
+  properties: {visible: true, spacing_above: small, spacing_below: small, height: '0',
     tooltip: ''}
   name: spacer_2
-  layout_properties: {grid_position: 'AFVCWF,REZVUV', row_background: '#3a88fe'}
+  layout_properties: {grid_position: 'QMKLCN,PBCOHA', full_width_row: true, row_background: '#3a88fe'}
 container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '2px solid #888888', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":25,"NTDSQB":35,"ESTSMM":4,"YGHIJS":15,"TTWPMW":15,"GGYAAQ":35}',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":25,"NTDSQB":24,"ESTSMM":2,"YGHIJS":10,"TTWPMW":10,"GGYAAQ":35,"LLRHIX":7}',
     spacing_below: small, background: ''}

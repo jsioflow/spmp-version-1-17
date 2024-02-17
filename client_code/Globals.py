@@ -18,9 +18,3 @@ def say_hello():
 
 answer = ''
 recommendation = ''
-
-  #def button_2_click(self, **event_args):
-#    """This method is called when the button is clicked"""
-   # pdf_file = anvil.server.call('build_pdf')
-   # anvil.media.download(pdf_file)
-   # pass
