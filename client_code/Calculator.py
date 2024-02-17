@@ -12,7 +12,7 @@ import json
 import anvil.http
 from time import sleep
 import anvil.media
-from . import Global
+from .. import Global
 
 class Calculator(CalculatorTemplate):
   def __init__(self, **properties):
