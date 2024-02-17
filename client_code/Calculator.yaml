@@ -95,7 +95,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'DMGKWG,TTWPMW'}
 - name: button_2
-  properties: {text: PDF, visible: true, bold: true, font_size: 20, icon: 'fa:file-pdf-o'}
+  properties: {text: Show Print Format, visible: true, bold: true, font_size: 20,
+    icon: 'fa:file-pdf-o'}
   type: Button
   layout_properties: {grid_position: 'DMGKWG,LLRHIX'}
   event_bindings: {click: button_2_click}
@@ -118,5 +119,5 @@ components:
 container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '2px solid #888888', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":25,"NTDSQB":24,"ESTSMM":2,"YGHIJS":10,"TTWPMW":10,"GGYAAQ":35,"LLRHIX":7}',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":25,"NTDSQB":13,"ESTSMM":5,"YGHIJS":10,"TTWPMW":15,"GGYAAQ":35,"LLRHIX":17}',
     spacing_below: small, background: ''}

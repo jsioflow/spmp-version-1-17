@@ -71,9 +71,7 @@ class Calculator(CalculatorTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    content = Globals.answer
-    content1 = Globals.recommendation
-    open_form("Form1", content, content1)
+    open_form("Form1")
     pass
 
 
