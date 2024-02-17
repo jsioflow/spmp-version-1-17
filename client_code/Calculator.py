@@ -62,6 +62,8 @@ class Calculator(CalculatorTemplate):
     new_file = folder1.create_file(file.name)
     new_file.set_media(self.file_loader_1.file)
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
+    global answer
+    answer = self.rich_text_1.content
     self.label_6.foreground = "#16d02b"
     self.label_6.text = 'Processing Complete, Results Below'
     self.rich_text_3.content = anvil.server.call('get_winning_tariff')
@@ -69,5 +71,9 @@ class Calculator(CalculatorTemplate):
     #sleep(30)
     #self.label_6.visible = False
   pass
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
 
 

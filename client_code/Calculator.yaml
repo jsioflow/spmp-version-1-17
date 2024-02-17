@@ -93,6 +93,11 @@ components:
     foreground: '#d01616'}
   type: Label
   layout_properties: {grid_position: 'DMGKWG,TTWPMW'}
+- name: button_2
+  properties: {text: button_2}
+  type: Button
+  layout_properties: {grid_position: 'DMGKWG,LLRHIX'}
+  event_bindings: {click: button_2_click}
 - type: Label
   properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
     visible: true, text: 'Copyright IOFLOW Ltd, Release_2.0 2024', font_size: 10,
