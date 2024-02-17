@@ -13,6 +13,7 @@ import anvil.http
 from time import sleep
 import anvil.media
 from .. import Global
+from ..Form1 import Form1
 
 class Calculator(CalculatorTemplate):
   def __init__(self, **properties):
