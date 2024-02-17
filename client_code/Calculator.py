@@ -12,6 +12,7 @@ import json
 import anvil.http
 from time import sleep
 import anvil.media
+from . import Global
 
 class Calculator(CalculatorTemplate):
   def __init__(self, **properties):
@@ -23,6 +24,7 @@ class Calculator(CalculatorTemplate):
     print(f'This is a test to see if this is triggered when a user is attempting to get a password')
     print(f"This user has logged in: {anvil.users.get_user()['email']}")
     #anvil.server.call('say_hello', 'Anvil Developer')
+    Global.say_hello()
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -62,18 +64,16 @@ class Calculator(CalculatorTemplate):
     new_file = folder1.create_file(file.name)
     new_file.set_media(self.file_loader_1.file)
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
-    global answer
-    answer = self.rich_text_1.content
+    #Global.answer = self.rich_text_1.content
     self.label_6.foreground = "#16d02b"
     self.label_6.text = 'Processing Complete, Results Below'
     self.rich_text_3.content = anvil.server.call('get_winning_tariff')
     self.rich_text_3.foreground = "#16d02b"
-    #sleep(30)
-    #self.label_6.visible = False
   pass
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
+    open_form("Form1")
     pass
 
 
