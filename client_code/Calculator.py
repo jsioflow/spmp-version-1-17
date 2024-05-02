@@ -55,15 +55,18 @@ class Calculator(CalculatorTemplate):
       self.label_6.foreground = "#16d02b"
       self.label_6.text = 'This is a valid file, Processing ....'
     self.label_2.text = file.name
-    folder1 = app_files.uploads
-    new_file = folder1.create_file(file.name)
-    new_file.set_media(self.file_loader_1.file)
+    
+    #folder1 = app_files.uploads
+    #new_file = folder1.create_file(file.name)
+    #new_file.set_media(self.file_loader_1.file)
     self.rich_text_1.content = anvil.server.call('file_for_analysis',file)
+    
     # Transfer of Answer to Global Module
     Globals.answer = self.rich_text_1.content
     self.label_6.foreground = "#16d02b"
     self.label_6.text = 'Processing Complete, Results Below'
     self.rich_text_3.content = anvil.server.call('get_winning_tariff')
+    
     # Transfer of Recommendation to Global Module
     Globals.recommendation = self.rich_text_3.content
     self.rich_text_3.foreground = "#16d02b"

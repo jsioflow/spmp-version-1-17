@@ -44,6 +44,7 @@ services:
         id: 0AN9wbdJNPDOMUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0AN9wbdJNPDOMUk9PVA'}
       labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
       iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.folder
+      permission: rwclient
       selfLink: https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
       lastViewedByMeDate: '2024-01-20T17:54:07.506Z'
       userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF/permissions/me',
