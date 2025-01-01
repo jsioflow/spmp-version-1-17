@@ -14,7 +14,12 @@ components:
     type: Image
   - layout_properties: {}
     name: rich_text_4
-    properties: {content: '6: You are now ready to analyse your usage pattern for the best tariff, click the upload option below and select your HDF filePlease note all "Total Tariff Costs" are VAT Inclusive and have assumed Direct Debit and electronic based billing', font_size: 16}
+    properties: {content: '6: You are now ready to analyse your usage pattern for the best tariff, click the upload option below and select your HDF file', font_size: 16}
+    type: RichText
+  - data_bindings: []
+    layout_properties: {}
+    name: rich_text_5
+    properties: {align: left, content: Please note that all "Total Tariff Costs" are VAT Inclusive and have assumed that both Direct Debit and Electronic Based Billing has been chosen as part of the customer contract. The analysis is based on the power utilisation history provided and no any fixed charges as detailed on individual bills for the period chosen, font_size: 16}
     type: RichText
   data_bindings: []
   layout_properties: {grid_position: 'GGRCTM,XWIWOC'}
