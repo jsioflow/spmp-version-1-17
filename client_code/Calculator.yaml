@@ -91,7 +91,7 @@ components:
   type: Button
 - layout_properties: {grid_position: 'DMGKWG,NTDSQB'}
   name: label_4
-  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: 10, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Copyright IOFLOW Ltd, Release_2.0 2024', tooltip: '', underline: false, visible: true}
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: 10, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Copyright IOFLOW Ltd, Release_2.1 2025', tooltip: '', underline: false, visible: true}
   type: Label
 - layout_properties: {grid_position: 'DMGKWG,ESTSMM'}
   name: image_2
