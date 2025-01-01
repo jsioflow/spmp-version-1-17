@@ -1,123 +1,101 @@
 components:
-- name: text_box_1
-  properties: {text: How to get your HDF File from ESB Networks, bold: true, font_size: 24,
-    align: center, spacing_above: small}
+- layout_properties: {grid_position: 'ZMQXVR,PWBRWW'}
+  name: text_box_1
+  properties: {align: center, bold: true, font_size: 24, spacing_above: small, text: 'How to get your Power Consumption File, ESB Networks'}
   type: TextBox
-  layout_properties: {grid_position: 'ZMQXVR,PWBRWW'}
-- name: image_1
-  properties: {height: 54.2578125, source: _/theme/CompressJPEG.online_512x512_image.png,
-    horizontal_align: right, visible: true}
+- layout_properties: {grid_position: 'ZMQXVR,RRJVPK'}
+  name: image_1
+  properties: {height: 54.2578125, horizontal_align: right, source: _/theme/CompressJPEG.online_512x512_image.png, visible: true}
   type: Image
-  layout_properties: {grid_position: 'ZMQXVR,RRJVPK'}
-- name: rich_text_2
-  properties: {content: '1: Go to the ESB Networks website and click on Login in the
-      top right corner
-
-      2: Click on Register Now and fill in the required details, such as your name,
-      email address, phone number, and password
-
-      3: You will receive a verification email with a code. Enter the code on the
-      website to confirm your email address
-
-      4: You can now access your ESB Networks account and view your energy consumption
-      and download your HDF file
-
-      5: Click on "My energy consumption", select a date range of 30 days maximum
-      and download HDF file to your desktop
-
-      6: You are now ready to analyse your usage pattern for the best tariff, click
-      the upload option below and select your HDF file
-
-
-      Please note all "Total Tariff Costs" are VAT Inclusive and have assumed Direct
-      Debit and electronic based billing', spacing_below: none, font_size: 16, format: plain_text,
-    align: left}
-  type: RichText
+- components: []
+  data_bindings: []
   layout_properties: {grid_position: 'GGRCTM,XWIWOC'}
-  data_bindings: []
-  components: []
-- type: Spacer
-  properties: {visible: true, spacing_above: small, spacing_below: small, height: '0',
-    tooltip: ''}
+  name: rich_text_2
+  properties:
+    align: left
+    content: |-
+      1: Go to the ESB Networks ( website and click on Login in the top right corner
+      2: Click on Register Now and fill in the required details, such as your name, email address, phone number, and password
+      3: You will receive a verification email with a code. Enter the code on the website to confirm your email address
+      4: You can now access your ESB Networks account and view your energy consumption and download your HDF file
+      5: Click on "My energy consumption", select a date range of 30 days maximum and download HDF file to your desktop
+      6: You are now ready to analyse your usage pattern for the best tariff, click the upload option below and select your HDF file
+
+      Please note all "Total Tariff Costs" are VAT Inclusive and have assumed Direct Debit and electronic based billing
+    font_size: 16
+    format: plain_text
+    spacing_below: none
+  type: RichText
+- layout_properties: {full_width_row: true, grid_position: 'JPHDLY,BFJMLQ', row_background: '#3a88fe'}
   name: spacer_1
-  layout_properties: {grid_position: 'JPHDLY,BFJMLQ', row_background: '#3a88fe', full_width_row: true}
-- name: label_3
-  properties: {text: 'Which is the best electricity tariff for you?', font_size: 30,
-    align: center, bold: true, italic: false}
+  properties: {height: '0', spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+  type: Spacer
+- layout_properties: {grid_position: 'GBHFJP,QEUFTS'}
+  name: label_3
+  properties: {align: center, bold: true, font_size: 30, italic: false, text: 'Which is the best electricity tariff for you?'}
   type: Label
-  layout_properties: {grid_position: 'GBHFJP,QEUFTS'}
-- name: label_1
-  properties: {text: Select HDF File for Upload and Analysis, align: center, bold: true,
-    icon: 'fa:file', font_size: 22}
+- layout_properties: {grid_position: 'ABNTAP,VTXZSY'}
+  name: label_1
+  properties: {align: center, bold: true, font_size: 22, icon: 'fa:file', text: Select HDF File for Upload and Analysis}
   type: Label
-  layout_properties: {grid_position: 'ABNTAP,VTXZSY'}
-- name: file_loader_1
-  properties: {bold: true, font_size: 22, tooltip: 'Click to select and upload your
-      HDF file '}
-  type: FileLoader
-  layout_properties: {grid_position: 'XJTBOV,DNJICM'}
+- data_bindings: []
   event_bindings: {change: file_loader_1_change}
-  data_bindings: []
-- name: label_6
-  properties: {bold: true, font_size: 20, align: center}
-  type: Label
+  layout_properties: {grid_position: 'XJTBOV,DNJICM'}
+  name: file_loader_1
+  properties: {bold: true, font_size: 22, tooltip: 'Click to select and upload your HDF file '}
+  type: FileLoader
+- data_bindings:
+  - {code: 'self.item['''']', property: visible, writeback: false}
   layout_properties: {grid_position: 'XJTBOV,GGYAAQ'}
-  data_bindings:
-  - {property: visible, code: 'self.item['''']', writeback: false}
-- name: label_2
+  name: label_6
+  properties: {align: center, bold: true, font_size: 20}
+  type: Label
+- layout_properties: {grid_position: 'XJTBOV,KZKPFG'}
+  name: label_2
   properties: {align: center, bold: true, font_size: 22}
   type: Label
-  layout_properties: {grid_position: 'XJTBOV,KZKPFG'}
-- name: spacer_3
+- layout_properties: {full_width_row: true, grid_position: 'KQFRPI,SPSIKO', row_background: '#b9bebe'}
+  name: spacer_3
   properties: {height: '0'}
   type: Spacer
-  layout_properties: {grid_position: 'KQFRPI,SPSIKO', full_width_row: true, row_background: '#b9bebe'}
-- name: rich_text_3
+- layout_properties: {full_width_row: true, grid_position: 'GEKUTO,CFPZSW'}
+  name: rich_text_3
   properties: {align: center, font_size: 24, spacing_above: medium, spacing_below: small}
   type: RichText
-  layout_properties: {grid_position: 'GEKUTO,CFPZSW', full_width_row: true}
-- name: rich_text_1
+- layout_properties: {grid_position: 'IIOGLB,XBIRIS'}
+  name: rich_text_1
   properties: {align: center}
   type: RichText
-  layout_properties: {grid_position: 'IIOGLB,XBIRIS'}
-- name: spacer_6
+- layout_properties: {full_width_row: true, grid_position: 'LRLLMO,SFOMOI', row_background: '#b9bebe'}
+  name: spacer_6
   properties: {height: '0'}
   type: Spacer
-  layout_properties: {grid_position: 'LRLLMO,SFOMOI', full_width_row: true, row_background: '#b9bebe'}
-- name: button_1
-  properties: {text: Logout, bold: true, font_size: 20, icon: 'fa:sign-out'}
-  type: Button
+- event_bindings: {click: button_1_click}
   layout_properties: {grid_position: 'DMGKWG,YGHIJS'}
-  event_bindings: {click: button_1_click}
-- name: label_5
-  properties: {bold: true, align: center, text: Logout Complete, visible: false, font_size: 20,
-    foreground: '#d01616'}
-  type: Label
-  layout_properties: {grid_position: 'DMGKWG,TTWPMW'}
-- name: button_2
-  properties: {text: Show Print Format, visible: true, bold: true, font_size: 20,
-    icon: 'fa:file-pdf-o'}
+  name: button_1
+  properties: {bold: true, font_size: 20, icon: 'fa:sign-out', text: Logout}
   type: Button
+- layout_properties: {grid_position: 'DMGKWG,TTWPMW'}
+  name: label_5
+  properties: {align: center, bold: true, font_size: 20, foreground: '#d01616', text: Logout Complete, visible: false}
+  type: Label
+- event_bindings: {click: button_2_click}
   layout_properties: {grid_position: 'DMGKWG,LLRHIX'}
-  event_bindings: {click: button_2_click}
-- type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Copyright IOFLOW Ltd, Release_2.0 2024', font_size: 10,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '', bold: false, underline: false, icon: ''}
+  name: button_2
+  properties: {bold: true, font_size: 20, icon: 'fa:file-pdf-o', text: Show Print Format, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'DMGKWG,NTDSQB'}
   name: label_4
-  layout_properties: {grid_position: 'DMGKWG,NTDSQB'}
-- name: image_2
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: 10, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Copyright IOFLOW Ltd, Release_2.0 2024', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'DMGKWG,ESTSMM'}
+  name: image_2
   properties: {height: 50.46484375, source: _/theme/CompressJPEG.online_512x512_image.png}
   type: Image
-  layout_properties: {grid_position: 'DMGKWG,ESTSMM'}
-- type: Spacer
-  properties: {visible: true, spacing_above: small, spacing_below: small, height: '0',
-    tooltip: ''}
+- layout_properties: {full_width_row: true, grid_position: 'QMKLCN,PBCOHA', row_background: '#3a88fe'}
   name: spacer_2
-  layout_properties: {grid_position: 'QMKLCN,PBCOHA', full_width_row: true, row_background: '#3a88fe'}
+  properties: {height: '0', spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+  type: Spacer
 container:
+  properties: {background: '', border: '2px solid #888888', col_spacing: medium, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":25,"NTDSQB":13,"ESTSMM":5,"YGHIJS":10,"TTWPMW":15,"GGYAAQ":35,"LLRHIX":17}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
   type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '2px solid #888888', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWBRWW":55,"RRJVPK":5,"DNJICM":20,"KZKPFG":25,"NTDSQB":13,"ESTSMM":5,"YGHIJS":10,"TTWPMW":15,"GGYAAQ":35,"LLRHIX":17}',
-    spacing_below: small, background: ''}

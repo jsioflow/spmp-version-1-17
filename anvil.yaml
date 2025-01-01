@@ -1,131 +1,126 @@
+allow_embedding: false
 correct_dependency_ids: {C6ZZPAPN4YYF5NVJ: C6ZZPAPN4YYF5NVJ}
+db_schema:
+  files:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: path
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: file
+      type: media
+    - admin_ui: {order: 2, width: 200}
+      name: file_version
+      type: string
+    server: full
+    title: Files
+  users:
+    client: full
+    columns:
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 100}
+      name: enabled
+      type: bool
+    - admin_ui: {width: 200}
+      name: signed_up
+      type: datetime
+    - admin_ui: {width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {width: 200}
+      name: email_confirmation_key
+      type: string
+    - admin_ui: {width: 200}
+      name: n_password_failures
+      type: number
+    server: full
+    title: Users
 dependencies:
 - app_id: C6ZZPAPN4YYF5NVJ
   version: {dev: false}
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
-    confirm_email: true, require_secure_passwords: true, use_google: true}
-  server_config: {user_table: users}
-- source: /runtime/services/google.yml
-  client_config:
-    app_files:
-    - capabilities: {canEdit: true, canCopy: false}
-      editable: true
-      copyable: false
-      embedLink: https://drive.google.com/embeddedfolderview?id=1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
-      copyRequiresWriterPermission: false
-      python_name: uploads
-      explicitlyTrashed: false
-      lastModifyingUser:
-        displayName: John Stone
-        kind: drive#user
-        isAuthenticatedUser: true
-        permissionId: '14425554729285325484'
-        emailAddress: stone.john@ioflow.ai
-        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjV2-AsgXWkNwAC9V1QcRLHLXZ5Okoh7zFie_SALf76VqDZuzQRiAKUuGBlNtcwYefmruBphHdhbc_ZljGqgmcphH-CCNvqToo98_j4LOnkdRGEcJTUwiNBHfpKhnnnoERMKrkHcKId6Mh_frlWKFyiajgFhVda0yPlT4teYsLukSl0qpDXps2gs6op4YOfCHiWDRCYxWBo82BsSdD9vvs9__VAdvLLpUphHSAABKh4Mk9QRnhkCFZNAsKqJEmWDyUfLDqXNSBOeKD3NH9st-D10UDhOLyNj4efUBeA5mNg0OrWTKA0mWcxsXaeQBmJZ_58LnbR-Bt1d_Fy_PsFgTLNotJqKi3N9wIdki69bPTuf5WJ80A3-TkEnBQBLwjh5lOXdK4zzChnYG5nYEt3clxKmupbJPA7KMyKhg3eE71h7pREgDZ5OtHAG8ctbqS_8_SJOw_N_NHsMOlIilNTGZm8z3X0WqX2apGigz3IEbtEh-BkJXMD90GBLhBgJozzO5a51Py-UcsfUaziZf0dycvW-kdeVeAec2oXnQhkNl8rBUukXCnoAp2W6j6skZ1b9o-huH-dZz_nnhtlm_aYBURbmGH2B0OI26zebZ6FtsopQrCVkSNXj1XZ1QiQ5fa8U0DsYt53PU3-t7QPU8VNY696QR-TMkNJZVqP9qAUVsYxtMwL8FzE6wbgAD--X-If9D986wddxvAAHVGrWWMQ4RsuhZQWk4VknI-31IFp5nJ8pyEZBfK-_mS1Z76hqYYSPJE33Xy_WtCjOE1aO6mYjHhMAKrWKK9vrWNiawL5bK_-dGfKhl-5rsNhtTa4Iy47KKwJkuuNQ2zU9hxokgo4EqoC6H49qgSHVya9NU946v0AUMENS8irIaspeR894-ZO1hPDMKtUYxMrKQJLhh3V-tgYFOx8PK7ugldZZt0LYdT3DVA=s64'}
-      shared: false
-      createdDate: '2024-01-20T17:54:07.506Z'
-      id: 1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
-      owners:
-      - displayName: John Stone
-        kind: drive#user
-        isAuthenticatedUser: true
-        permissionId: '14425554729285325484'
-        emailAddress: stone.john@ioflow.ai
-        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjV2-AsgXWkNwAC9V1QcRLHLXZ5Okoh7zFie_SALf76VqDZuzQRiAKUuGBlNtcwYefmruBphHdhbc_ZljGqgmcphH-CCNvqToo98_j4LOnkdRGEcJTUwiNBHfpKhnnnoERMKrkHcKId6Mh_frlWKFyiajgFhVda0yPlT4teYsLukSl0qpDXps2gs6op4YOfCHiWDRCYxWBo82BsSdD9vvs9__VAdvLLpUphHSAABKh4Mk9QRnhkCFZNAsKqJEmWDyUfLDqXNSBOeKD3NH9st-D10UDhOLyNj4efUBeA5mNg0OrWTKA0mWcxsXaeQBmJZ_58LnbR-Bt1d_Fy_PsFgTLNotJqKi3N9wIdki69bPTuf5WJ80A3-TkEnBQBLwjh5lOXdK4zzChnYG5nYEt3clxKmupbJPA7KMyKhg3eE71h7pREgDZ5OtHAG8ctbqS_8_SJOw_N_NHsMOlIilNTGZm8z3X0WqX2apGigz3IEbtEh-BkJXMD90GBLhBgJozzO5a51Py-UcsfUaziZf0dycvW-kdeVeAec2oXnQhkNl8rBUukXCnoAp2W6j6skZ1b9o-huH-dZz_nnhtlm_aYBURbmGH2B0OI26zebZ6FtsopQrCVkSNXj1XZ1QiQ5fa8U0DsYt53PU3-t7QPU8VNY696QR-TMkNJZVqP9qAUVsYxtMwL8FzE6wbgAD--X-If9D986wddxvAAHVGrWWMQ4RsuhZQWk4VknI-31IFp5nJ8pyEZBfK-_mS1Z76hqYYSPJE33Xy_WtCjOE1aO6mYjHhMAKrWKK9vrWNiawL5bK_-dGfKhl-5rsNhtTa4Iy47KKwJkuuNQ2zU9hxokgo4EqoC6H49qgSHVya9NU946v0AUMENS8irIaspeR894-ZO1hPDMKtUYxMrKQJLhh3V-tgYFOx8PK7ugldZZt0LYdT3DVA=s64'}
-      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
-      spaces: [drive]
-      parents:
-      - {selfLink: 'https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF/parents/0AN9wbdJNPDOMUk9PVA',
-        id: 0AN9wbdJNPDOMUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0AN9wbdJNPDOMUk9PVA'}
-      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
-      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.folder
-      permission: rwclient
-      selfLink: https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
-      lastViewedByMeDate: '2024-01-20T17:54:07.506Z'
-      userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF/permissions/me',
-        etag: '"CY2iNG79GIVsqDgX6pcdOdOseE0"', pendingOwner: false}
-      lastModifyingUserName: John Stone
-      etag: '"MTcwNTc3MzI0NzUwNg"'
-      kind: drive#file
-      modifiedByMeDate: '2024-01-20T17:54:07.506Z'
-      title: Uploads
-      version: '1'
-      appDataContents: false
-      writersCanShare: true
-      alternateLink: https://drive.google.com/drive/folders/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
-      mimeType: application/vnd.google-apps.folder
-      modifiedDate: '2024-01-20T17:54:07.506Z'
-      quotaBytesUsed: '0'
-      ownerNames: [John Stone]
-  server_config: {enc_delegation_refresh_token: 1643GBhn1msBg0CvzlytziEbPNqA8C0DKXHg6MbWJbApffJ77Z8Nk+Ng5q+Cu6o7aO9dhc4SIsTh9ibjZHoJmmWqgM/aBWVv+Z59/GygoweE7CO3rGd8ptcZFuInO0dYbObpmCWHL8deHOUreNmVlH949W3Wf0mNIIKL+ERlAth5fHkAhRV6sy6Y50wSk1dD7iVFGqpVtiDePnXXweBEgTHmAKBvB/WYbfPcVw/sdZNFtAhedP6X948/9BFAh+fkx/lgwkS2StME2pTxLXxtnUc30dijdljssPQQlmglgZBs8p/YYHHLef5f7WdHgg==}
-- source: /runtime/services/anvil/files.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/anvil/secrets.yml
-  client_config: {}
-  server_config: {}
-startup: {type: form, module: Calculator}
-package_name: SPMP_Version_1_17
-allow_embedding: false
+metadata: {description: 'App to read, process and analyse an ESB Networks HDF file to ascertain the best tariff to choose from based on usage in the last 30 days', logo_img: 'asset:CompressJPEG.online_512x512_image.png', title: Electric Tariff Calculator}
 name: Electric Tariff Calculator V2.0
+package_name: SPMP_Version_1_17
+renamed: true
 runtime_options:
-  version: 2
   client_version: '3'
-  server_version: python3-full
   server_spec: null
   server_spec_disabled: {base: python310-standard, requirements: tabulate==0.9.0}
-metadata: {logo_img: 'asset:CompressJPEG.online_512x512_image.png', title: Electric Tariff Calculator,
-  description: 'App to read, process and analyse an ESB Networks HDF file to ascertain
-    the best tariff to choose from based on usage in the last 30 days'}
+  server_version: python3-full
+  version: 2
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {allow_signup: true, confirm_email: true, enable_automatically: true, require_secure_passwords: true, use_email: true, use_google: true}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+- client_config:
+    app_files:
+    - alternateLink: https://drive.google.com/drive/folders/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
+      appDataContents: false
+      capabilities: {canCopy: false, canEdit: true}
+      copyRequiresWriterPermission: false
+      copyable: false
+      createdDate: '2024-01-20T17:54:07.506Z'
+      editable: true
+      embedLink: https://drive.google.com/embeddedfolderview?id=1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
+      etag: '"MTcwNTc3MzI0NzUwNg"'
+      explicitlyTrashed: false
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.folder
+      id: 1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
+      kind: drive#file
+      labels: {hidden: false, restricted: false, starred: false, trashed: false, viewed: true}
+      lastModifyingUser:
+        displayName: John Stone
+        emailAddress: stone.john@ioflow.ai
+        isAuthenticatedUser: true
+        kind: drive#user
+        permissionId: '14425554729285325484'
+        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjV2-AsgXWkNwAC9V1QcRLHLXZ5Okoh7zFie_SALf76VqDZuzQRiAKUuGBlNtcwYefmruBphHdhbc_ZljGqgmcphH-CCNvqToo98_j4LOnkdRGEcJTUwiNBHfpKhnnnoERMKrkHcKId6Mh_frlWKFyiajgFhVda0yPlT4teYsLukSl0qpDXps2gs6op4YOfCHiWDRCYxWBo82BsSdD9vvs9__VAdvLLpUphHSAABKh4Mk9QRnhkCFZNAsKqJEmWDyUfLDqXNSBOeKD3NH9st-D10UDhOLyNj4efUBeA5mNg0OrWTKA0mWcxsXaeQBmJZ_58LnbR-Bt1d_Fy_PsFgTLNotJqKi3N9wIdki69bPTuf5WJ80A3-TkEnBQBLwjh5lOXdK4zzChnYG5nYEt3clxKmupbJPA7KMyKhg3eE71h7pREgDZ5OtHAG8ctbqS_8_SJOw_N_NHsMOlIilNTGZm8z3X0WqX2apGigz3IEbtEh-BkJXMD90GBLhBgJozzO5a51Py-UcsfUaziZf0dycvW-kdeVeAec2oXnQhkNl8rBUukXCnoAp2W6j6skZ1b9o-huH-dZz_nnhtlm_aYBURbmGH2B0OI26zebZ6FtsopQrCVkSNXj1XZ1QiQ5fa8U0DsYt53PU3-t7QPU8VNY696QR-TMkNJZVqP9qAUVsYxtMwL8FzE6wbgAD--X-If9D986wddxvAAHVGrWWMQ4RsuhZQWk4VknI-31IFp5nJ8pyEZBfK-_mS1Z76hqYYSPJE33Xy_WtCjOE1aO6mYjHhMAKrWKK9vrWNiawL5bK_-dGfKhl-5rsNhtTa4Iy47KKwJkuuNQ2zU9hxokgo4EqoC6H49qgSHVya9NU946v0AUMENS8irIaspeR894-ZO1hPDMKtUYxMrKQJLhh3V-tgYFOx8PK7ugldZZt0LYdT3DVA=s64'}
+      lastModifyingUserName: John Stone
+      lastViewedByMeDate: '2024-01-20T17:54:07.506Z'
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      mimeType: application/vnd.google-apps.folder
+      modifiedByMeDate: '2024-01-20T17:54:07.506Z'
+      modifiedDate: '2024-01-20T17:54:07.506Z'
+      ownerNames: [John Stone]
+      owners:
+      - displayName: John Stone
+        emailAddress: stone.john@ioflow.ai
+        isAuthenticatedUser: true
+        kind: drive#user
+        permissionId: '14425554729285325484'
+        picture: {url: 'https://lh3.googleusercontent.com/a-/ALV-UjV2-AsgXWkNwAC9V1QcRLHLXZ5Okoh7zFie_SALf76VqDZuzQRiAKUuGBlNtcwYefmruBphHdhbc_ZljGqgmcphH-CCNvqToo98_j4LOnkdRGEcJTUwiNBHfpKhnnnoERMKrkHcKId6Mh_frlWKFyiajgFhVda0yPlT4teYsLukSl0qpDXps2gs6op4YOfCHiWDRCYxWBo82BsSdD9vvs9__VAdvLLpUphHSAABKh4Mk9QRnhkCFZNAsKqJEmWDyUfLDqXNSBOeKD3NH9st-D10UDhOLyNj4efUBeA5mNg0OrWTKA0mWcxsXaeQBmJZ_58LnbR-Bt1d_Fy_PsFgTLNotJqKi3N9wIdki69bPTuf5WJ80A3-TkEnBQBLwjh5lOXdK4zzChnYG5nYEt3clxKmupbJPA7KMyKhg3eE71h7pREgDZ5OtHAG8ctbqS_8_SJOw_N_NHsMOlIilNTGZm8z3X0WqX2apGigz3IEbtEh-BkJXMD90GBLhBgJozzO5a51Py-UcsfUaziZf0dycvW-kdeVeAec2oXnQhkNl8rBUukXCnoAp2W6j6skZ1b9o-huH-dZz_nnhtlm_aYBURbmGH2B0OI26zebZ6FtsopQrCVkSNXj1XZ1QiQ5fa8U0DsYt53PU3-t7QPU8VNY696QR-TMkNJZVqP9qAUVsYxtMwL8FzE6wbgAD--X-If9D986wddxvAAHVGrWWMQ4RsuhZQWk4VknI-31IFp5nJ8pyEZBfK-_mS1Z76hqYYSPJE33Xy_WtCjOE1aO6mYjHhMAKrWKK9vrWNiawL5bK_-dGfKhl-5rsNhtTa4Iy47KKwJkuuNQ2zU9hxokgo4EqoC6H49qgSHVya9NU946v0AUMENS8irIaspeR894-ZO1hPDMKtUYxMrKQJLhh3V-tgYFOx8PK7ugldZZt0LYdT3DVA=s64'}
+      parents:
+      - {id: 0AN9wbdJNPDOMUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0AN9wbdJNPDOMUk9PVA', selfLink: 'https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF/parents/0AN9wbdJNPDOMUk9PVA'}
+      permission: rwclient
+      python_name: uploads
+      quotaBytesUsed: '0'
+      selfLink: https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF
+      shared: false
+      spaces: [drive]
+      title: Uploads
+      userPermission: {etag: '"CY2iNG79GIVsqDgX6pcdOdOseE0"', id: me, kind: drive#permission, pendingOwner: false, role: owner, selfLink: 'https://www.googleapis.com/drive/v2/files/1nuWOr5OHRHajMD45Sv9hUTAaV-DoGBVF/permissions/me', type: user}
+      version: '1'
+      writersCanShare: true
+  server_config: {enc_delegation_refresh_token: 1643GBhn1msBg0CvzlytziEbPNqA8C0DKXHg6MbWJbApffJ77Z8Nk+Ng5q+Cu6o7aO9dhc4SIsTh9ibjZHoJmmWqgM/aBWVv+Z59/GygoweE7CO3rGd8ptcZFuInO0dYbObpmCWHL8deHOUreNmVlH949W3Wf0mNIIKL+ERlAth5fHkAhRV6sy6Y50wSk1dD7iVFGqpVtiDePnXXweBEgTHmAKBvB/WYbfPcVw/sdZNFtAhedP6X948/9BFAh+fkx/lgwkS2StME2pTxLXxtnUc30dijdljssPQQlmglgZBs8p/YYHHLef5f7WdHgg==}
+  source: /runtime/services/google.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/files.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/secrets.yml
+startup: {module: Calculator, type: form}
 startup_form: null
-db_schema:
-  users:
-    title: Users
-    client: full
-    server: full
-    columns:
-    - name: email
-      admin_ui: {width: 200}
-      type: string
-    - name: enabled
-      admin_ui: {width: 100}
-      type: bool
-    - name: signed_up
-      admin_ui: {width: 200}
-      type: datetime
-    - name: password_hash
-      admin_ui: {width: 200}
-      type: string
-    - name: last_login
-      admin_ui: {width: 200}
-      type: datetime
-    - name: confirmed_email
-      admin_ui: {width: 200}
-      type: bool
-    - name: email_confirmation_key
-      admin_ui: {width: 200}
-      type: string
-    - name: n_password_failures
-      admin_ui: {width: 200}
-      type: number
-  files:
-    client: none
-    server: full
-    columns:
-    - name: path
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: file
-      admin_ui: {order: 1, width: 200}
-      type: media
-    - name: file_version
-      admin_ui: {order: 2, width: 200}
-      type: string
-    title: Files
 uplink_visible: true
-renamed: true

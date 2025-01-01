@@ -1,41 +1,35 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{"FTFBNH":7,"GZKUUQ":4,"RHEOHP":55,"PELNMF":5,"IAGJOF":40}'}
 components:
-- name: rich_text_3
-  properties: {content: 'IOFlow Power Management, Electric Tariff Calculator', align: center,
-    font_size: 24, spacing_above: medium}
+- layout_properties: {full_width_row: false, grid_position: 'ROPSAL,RHEOHP'}
+  name: rich_text_3
+  properties: {align: center, content: 'IOFlow Power Management, Electric Tariff Calculator', font_size: 24, spacing_above: medium}
   type: RichText
-  layout_properties: {grid_position: 'ROPSAL,RHEOHP', full_width_row: false}
-- name: image_1_copy
-  properties: {height: 54.2578125, source: _/theme/CompressJPEG.online_512x512_image.png,
-    horizontal_align: right, visible: true}
+- layout_properties: {grid_position: 'ROPSAL,PELNMF'}
+  name: image_1_copy
+  properties: {height: 54.2578125, horizontal_align: right, source: _/theme/CompressJPEG.online_512x512_image.png, visible: true}
   type: Image
-  layout_properties: {grid_position: 'ROPSAL,PELNMF'}
-- name: rich_text_2
-  properties: {font_size: 22, align: center}
+- layout_properties: {full_width_row: true, grid_position: 'OQFIOE,FKTRYM'}
+  name: rich_text_2
+  properties: {align: center, font_size: 22}
   type: RichText
-  layout_properties: {grid_position: 'OQFIOE,FKTRYM', full_width_row: true}
-- name: rich_text_1
+- event_bindings: {}
+  layout_properties: {grid_position: 'KMXKSR,NDADGB'}
+  name: rich_text_1
   properties: {content: ''}
   type: RichText
-  layout_properties: {grid_position: 'KMXKSR,NDADGB'}
-  event_bindings: {}
-- name: button_1
-  properties: {text: Return to Home Page, bold: true, icon: 'fa:backward', font_size: 20}
-  type: Button
+- event_bindings: {click: button_1_click}
   layout_properties: {grid_position: 'RZEJMG,IAGJOF'}
-  event_bindings: {click: button_1_click}
-- name: label_4
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Copyright IOFLOW Ltd, Release_2.0 2024', font_size: 10,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '', bold: false, underline: false, icon: ''}
+  name: button_1
+  properties: {bold: true, font_size: 20, icon: 'fa:backward', text: Return to Home Page}
+  type: Button
+- layout_properties: {grid_position: 'RZEJMG,FTFBNH'}
+  name: label_4
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: 10, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Copyright IOFLOW Ltd, Release_2.0 2024', tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'RZEJMG,FTFBNH'}
-- name: image_1
-  properties: {height: 54.2578125, source: _/theme/CompressJPEG.online_512x512_image.png,
-    horizontal_align: right, visible: true}
+- layout_properties: {grid_position: 'RZEJMG,GZKUUQ'}
+  name: image_1
+  properties: {height: 54.2578125, horizontal_align: right, source: _/theme/CompressJPEG.online_512x512_image.png, visible: true}
   type: Image
-  layout_properties: {grid_position: 'RZEJMG,GZKUUQ'}
+container:
+  properties: {col_widths: '{"FTFBNH":7,"GZKUUQ":4,"RHEOHP":55,"PELNMF":5,"IAGJOF":40}'}
+  type: ColumnPanel
 is_package: true
