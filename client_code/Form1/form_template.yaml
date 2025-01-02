@@ -21,15 +21,15 @@ components:
   name: button_1
   properties: {bold: true, font_size: 20, icon: 'fa:backward', text: Return to Home Page}
   type: Button
-- layout_properties: {grid_position: 'RZEJMG,FTFBNH'}
+- layout_properties: {grid_position: 'RZEJMG,ZLYNWL'}
   name: label_4
-  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: 10, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Copyright IOFLOW Ltd, Release_2.1 2025', tooltip: '', underline: false, visible: true}
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 10, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Copyright IOFLOW Ltd, Release_2.1 2025', tooltip: '', underline: false, visible: true}
   type: Label
 - layout_properties: {grid_position: 'RZEJMG,GZKUUQ'}
   name: image_1
   properties: {height: 54.2578125, horizontal_align: right, source: _/theme/CompressJPEG.online_512x512_image.png, visible: true}
   type: Image
 container:
-  properties: {col_widths: '{"FTFBNH":7,"GZKUUQ":4,"RHEOHP":55,"PELNMF":5,"IAGJOF":40}'}
+  properties: {col_widths: '{"GZKUUQ":4,"RHEOHP":55,"PELNMF":5,"IAGJOF":35,"ZLYNWL":25}'}
   type: ColumnPanel
 is_package: true
